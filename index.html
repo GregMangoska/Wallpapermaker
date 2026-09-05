@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Wallpaper Maker</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <canvas id="preview" aria-hidden="true"></canvas>
+
+  <header id="topbar">
+    <span class="bar-title">Sets</span>
+    <div id="sets-row" class="sets-row"></div>
+  </header>
+
+  <footer id="bottombar">
+    <button id="properties-toggle" class="properties-toggle" type="button">
+      <span class="bar-title">Properties</span>
+      <span class="chevron">▴</span>
+    </button>
+  </footer>
+
+  <div id="panel" class="panel hidden" aria-hidden="true">
+    <div id="panel-scroll" class="panel-scroll"></div>
+    <div id="panel-actions" class="panel-actions">
+      <button id="download-image" class="btn" type="button">Download Image</button>
+      <button id="download-video" class="btn" type="button">Download Video</button>
+      <button id="randomize" class="btn btn-ghost" type="button">Randomize</button>
+    </div>
+  </div>
+
+  <div id="confirm-modal" class="modal hidden" aria-hidden="true">
+    <div class="modal-card">
+      <h2 id="modal-title">Confirm</h2>
+      <p id="modal-body"></p>
+      <div class="modal-actions">
+        <button id="modal-cancel" class="btn" type="button">Cancel</button>
+        <button id="modal-confirm" class="btn btn-accent" type="button">Confirm</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="recording-overlay" class="recording-overlay hidden">
+    <div class="recording-badge" id="recording-badge">Recording…</div>
+  </div>
+
+  <script src="app.js" defer></script>
+</body>
+</html>
